@@ -26,5 +26,20 @@ const puppeteer = require('puppeteer');
 
     console.log("Logged in successfully!");
 
+    // Click on "Graduating and Full-Time Jobs"
+    await page.waitForSelector('a[href="/myAccount/graduating.htm"]', { timeout: 10000 });
+    await page.click('a[href="/myAccount/graduating.htm"]');
+    await page.waitForNavigation({ waitUntil: 'networkidle2' });
+    
+    console.log("Navigated to Graduating and Full-Time Jobs!");
+
     await browser.close();
 })();
+
+
+
+
+
+
+
+
